@@ -1,0 +1,33 @@
+{
+    "schemaVersion": 1,
+    "id": "enderboxmod",
+    "version": "${version}",
+    "name": "Ender Box",
+    "description": "Introduces a common to everyone Ender Box",
+    "authors": [
+        "t_r_a_t"
+    ],
+    "contact": {
+        "homepage": "https://fabricmc.net/",
+        "sources": "https://github.com/FabricMC/fabric-example-mod"
+    },
+    "license": "CC0-1.0",
+    "icon": "assets/enderboxmod/icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "net.enderbox.mod.loader.Loader"
+        ]
+    },
+    "mixins": [
+        "enderboxmod.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=0.7.2",
+        "fabric": "*",
+        "minecraft": "1.16.x"
+    },
+    "suggests": {
+        "flamingo": "*"
+    }
+}
