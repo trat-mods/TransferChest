@@ -16,7 +16,7 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "net.enderbox.mod.loader.Loader"
+            "net.enderbox.mod.loader.EBLoader"
         ]
     },
     "mixins": [
