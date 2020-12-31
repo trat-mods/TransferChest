@@ -3,6 +3,7 @@
     "package": "net.enderbox.mod.mixin",
     "compatibilityLevel": "JAVA_8",
     "mixins": [
+        "MinecraftServerMixin"
     ],
     "client": [
     ],
