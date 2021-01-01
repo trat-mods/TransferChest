@@ -3,10 +3,7 @@ package net.transferchest.mod.block;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Material;
-import net.minecraft.block.ShapeContext;
+import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.ParticleTypes;
@@ -41,7 +38,7 @@ public class TransferChestBlock extends AHorizontalFacingInventoryBlock
     
     public TransferChestBlock()
     {
-        super(FabricBlockSettings.of(Material.METAL).breakByHand((true)).strength(0.8F, 0.5F).sounds(BlockSoundGroup.METAL));
+        super(FabricBlockSettings.of(Material.STONE).materialColor(MaterialColor.BLACK).requiresTool().strength(40F, 900F).sounds(BlockSoundGroup.STONE));
         this.setDefaultState((BlockState) ((BlockState) ((BlockState) this.stateManager.getDefaultState()).with(OPENED, false)));
     }
     
@@ -49,12 +46,6 @@ public class TransferChestBlock extends AHorizontalFacingInventoryBlock
     {
         stateManager.add(OPENED);
         super.appendProperties(stateManager);
-    }
-    
-    @Override public boolean onSyncedBlockEvent(BlockState state, World world, BlockPos pos, int type, int data)
-    {
-        System.out.println("Viewers: " + data);
-        return super.onSyncedBlockEvent(state, world, pos, type, data);
     }
     
     @Override
@@ -71,19 +62,17 @@ public class TransferChestBlock extends AHorizontalFacingInventoryBlock
     @Environment(EnvType.CLIENT)
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random)
     {
-        for(int i = 0; i < 2; ++i)
-        {
-            int j = random.nextInt(2) * 2 - 1;
-            int k = random.nextInt(2) * 2 - 1;
-            double d = (double) pos.getX() + 0.5D + 0.25D * (double) j;
-            double e = (double) ((float) pos.getY() + random.nextFloat());
-            double f = (double) pos.getZ() + 0.5D + 0.25D * (double) k;
-            double g = 0.45D * (double) (random.nextFloat() * (float) j);
-            double h = 0.45D * ((double) random.nextFloat()) * 0.1D;
-            double l = 0.45D * (double) (random.nextFloat() * (float) k);
-            world.addParticle(ParticleTypes.DRAGON_BREATH, d, e, f, g, h, l);
-        }
+        int j = random.nextInt(2) * 2 - 1;
+        int k = random.nextInt(2) * 2 - 1;
+        double d = (double) pos.getX() + 0.5D + 0.25D * (double) j;
+        double e = (double) ((float) pos.getY() + random.nextFloat());
+        double f = (double) pos.getZ() + 0.5D + 0.25D * (double) k;
+        double g = 0.45D * (double) (random.nextFloat() * (float) j);
+        double h = 0.45D * ((double) random.nextFloat()) * 0.1D;
+        double l = 0.45D * (double) (random.nextFloat() * (float) k);
+        world.addParticle(ParticleTypes.DRAGON_BREATH, d, e, f, g, h, l);
     }
+
     
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit)
