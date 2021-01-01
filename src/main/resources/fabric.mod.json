@@ -1,29 +1,29 @@
 {
     "schemaVersion": 1,
-    "id": "enderboxmod",
+    "id": "transferchestmod",
     "version": "${version}",
-    "name": "Ender Box",
-    "description": "Introduces a common to everyone Ender Box",
+    "name": "Transfer Chest",
+    "description": "Introduces a chest that is capable of instantly transfer items among players",
     "authors": [
         "t_r_a_t"
     ],
     "contact": {
-        "homepage": "https://fabricmc.net/",
-        "sources": "https://github.com/FabricMC/fabric-example-mod"
+        "homepage": "https://github.com/tratteo/TransferChest-1.16/wiki",
+        "sources": "https://github.com/tratteo/TransferChest-1.16"
     },
     "license": "CC0-1.0",
-    "icon": "assets/enderboxmod/icon.png",
+    "icon": "assets/transferchestmod/icon.png",
     "environment": "*",
     "entrypoints": {
         "main": [
-            "net.enderbox.mod.loader.EBLoader"
+            "net.transferchest.mod.loader.TCLoader"
         ],
         "client": [
-            "net.enderbox.mod.loader.EBClientLoader"
+            "net.transferchest.mod.loader.TCClientLoader"
         ]
     },
     "mixins": [
-        "enderboxmod.mixins.json"
+        "transferchestmod.mixins.json"
     ],
     "depends": {
         "fabricloader": ">=0.7.2",

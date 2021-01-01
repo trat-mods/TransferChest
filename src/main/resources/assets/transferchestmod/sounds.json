@@ -1,0 +1,12 @@
+{
+    "transfer_chest_open": {
+        "sounds": [
+            "transferchestmod:transfer_chest_open"
+        ]
+    },
+    "transfer_chest_close": {
+        "sounds": [
+            "transferchestmod:transfer_chest_close"
+        ]
+    }
+}
