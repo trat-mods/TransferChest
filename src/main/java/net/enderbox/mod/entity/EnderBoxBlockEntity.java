@@ -1,5 +1,6 @@
 package net.enderbox.mod.entity;
 
+import com.sun.istack.internal.Nullable;
 import net.enderbox.mod.core.EnderBoxHandler;
 import net.enderbox.mod.entity.abstraction.AInventoryEntity;
 import net.enderbox.mod.gui.handler.EnderBoxGUIHandler;
@@ -18,7 +19,6 @@ import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
-import org.jetbrains.annotations.Nullable;
 
 public class EnderBoxBlockEntity extends AInventoryEntity implements NamedScreenHandlerFactory, ExtendedScreenHandlerFactory
 {
