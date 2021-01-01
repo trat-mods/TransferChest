@@ -1,0 +1,10 @@
+{
+    "parent": "block/orientable",
+    "textures": {
+        "particle": "#side",
+        "top": "enderboxmod:block/ender_box_side",
+        "front": "enderboxmod:block/ender_box_front",
+        "side": "#top",
+        "bottom": "#top"
+    }
+}

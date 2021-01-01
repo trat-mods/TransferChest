@@ -1,4 +1,4 @@
-package net.enderbox.mod.utils;
+package net.enderbox.mod.api;
 
 public final class ModLogger
 {

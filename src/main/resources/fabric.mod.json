@@ -17,6 +17,9 @@
     "entrypoints": {
         "main": [
             "net.enderbox.mod.loader.EBLoader"
+        ],
+        "client": [
+            "net.enderbox.mod.loader.EBClientLoader"
         ]
     },
     "mixins": [

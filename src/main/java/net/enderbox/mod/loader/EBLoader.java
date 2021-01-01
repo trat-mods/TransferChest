@@ -1,5 +1,9 @@
 package net.enderbox.mod.loader;
 
+import net.enderbox.mod.initializer.EBBlocks;
+import net.enderbox.mod.initializer.EBEntities;
+import net.enderbox.mod.initializer.EBGUIHandlers;
+import net.enderbox.mod.initializer.EBItems;
 import net.fabricmc.api.ModInitializer;
 
 public final class EBLoader implements ModInitializer
@@ -9,7 +13,9 @@ public final class EBLoader implements ModInitializer
     
     @Override public void onInitialize()
     {
-        //TODO mixin in MinecraftServer->shutdown()
-        
+        EBEntities.initialize();
+        EBBlocks.initialize();
+        EBItems.initialize();
+        EBGUIHandlers.initialize();
     }
 }

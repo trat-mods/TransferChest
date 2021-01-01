@@ -1,10 +1,10 @@
-package net.enderbox.mod.utils;
+package net.enderbox.mod.api;
 
 import net.enderbox.mod.loader.EBLoader;
 
 import java.io.*;
 
-public class Serializer
+public final class Serializer
 {
     public static final String NAME = "enderBox.data";
     public static final String PATH = "ender_box_mod";
