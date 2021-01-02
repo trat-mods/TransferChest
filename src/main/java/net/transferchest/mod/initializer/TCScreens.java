@@ -1,10 +1,10 @@
 package net.transferchest.mod.initializer;
 
+import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 import net.transferchest.mod.gui.handler.TransferChestGUIHandler;
 import net.transferchest.mod.gui.screen.TransferChestScreen;
-import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 
-public final class EBScreens
+public final class TCScreens
 {
     public static void initialize()
     {

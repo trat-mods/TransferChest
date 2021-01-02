@@ -19,7 +19,9 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.transferchest.mod.abstraction.AHorizontalFacingInventoryBlock;
+import net.transferchest.mod.core.TransferChestHandler;
 import net.transferchest.mod.entity.TransferChestBlockEntity;
+import net.transferchest.mod.gui.handler.TransferChestGUIHandler;
 import net.transferchest.mod.loader.TCLoader;
 
 import java.util.Random;
@@ -77,9 +79,12 @@ public class TransferChestBlock extends AHorizontalFacingInventoryBlock
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit)
     {
-        
-        if(world.isClient) return ActionResult.SUCCESS;
         player.openHandledScreen(state.createScreenHandlerFactory(world, pos));
+        if(!world.isClient)
+        {
+            TransferChestHandler.openGUI(world, (TransferChestGUIHandler) player.currentScreenHandler);
+            return  ActionResult.SUCCESS;
+        }
         return ActionResult.SUCCESS;
     }
 }

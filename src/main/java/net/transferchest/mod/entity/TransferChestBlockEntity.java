@@ -30,7 +30,7 @@ import net.transferchest.mod.initializer.TCSounds;
 
 public class TransferChestBlockEntity extends AInventoryEntity implements NamedScreenHandlerFactory, ExtendedScreenHandlerFactory
 {
-    public static final int INVENTORY_SIZE = 9;
+    public static final int INVENTORY_SIZE = 10;
     private int viewers;
     
     public TransferChestBlockEntity()
@@ -63,29 +63,10 @@ public class TransferChestBlockEntity extends AInventoryEntity implements NamedS
         return new TranslatableText(getCachedState().getBlock().getTranslationKey());
     }
     
-    public void addViewer()
-    {
-        viewers++;
-        if(viewers > 0 && !isOpened())
-        {
-            setOpened(true);
-        }
-    }
-    
-    public void removeViewer()
-    {
-        viewers--;
-        if(viewers < 0) viewers = 0;
-        
-        if(viewers <= 0 && isOpened())
-        {
-            setOpened(false);
-        }
-    }
     
     @Override public @Nullable ScreenHandler createMenu(int syncId, PlayerInventory inv, PlayerEntity player)
     {
-        items = TransferChestHandler.getEnderBoxInventory();
+        items = TransferChestHandler.getTransferChestInventory();
         return new TransferChestGUIHandler(syncId, inv, ScreenHandlerContext.create(world, pos));
     }
     
@@ -97,12 +78,22 @@ public class TransferChestBlockEntity extends AInventoryEntity implements NamedS
     
     @Override public void onOpen(PlayerEntity player)
     {
-        addViewer();
+        viewers++;
+        if(viewers > 0 && !isOpened())
+        {
+            setOpened(true);
+        }
     }
     
     @Override public void onClose(PlayerEntity player)
     {
-        removeViewer();
+        viewers--;
+        if(viewers < 0) viewers = 0;
+        
+        if(viewers <= 0 && isOpened())
+        {
+            setOpened(false);
+        }
     }
     
     private void setOpened(boolean opened)
@@ -111,7 +102,7 @@ public class TransferChestBlockEntity extends AInventoryEntity implements NamedS
         {
             this.world.setBlockState(this.pos, (BlockState) this.world.getBlockState(this.pos).with(TransferChestBlock.OPENED, opened), 0B1011);
             SoundEvent event = opened ? TCSounds.TRANSFER_CHEST_OPEN_SOUNDEVENT : TCSounds.TRANSFER_CHEST_CLOSE_SOUNDEVENT;
-            this.world.playSound(null, pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D, event, SoundCategory.BLOCKS, 0.35F, this.world.random.nextFloat() * 0.2F + 1F);
+            this.world.playSound(null, pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D, event, SoundCategory.BLOCKS, 0.45F, this.world.random.nextFloat() * 0.2F + 1F);
         }
     }
     
