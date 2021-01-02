@@ -5,6 +5,8 @@ import net.fabricmc.fabric.api.network.ClientSidePacketRegistry;
 import net.transferchest.mod.initializer.TCScreens;
 import net.transferchest.mod.network.packet.TransferChestWatchersS2CPacket;
 
+;
+
 public final class TCClientLoader implements ClientModInitializer
 {
     @Override public void onInitializeClient()

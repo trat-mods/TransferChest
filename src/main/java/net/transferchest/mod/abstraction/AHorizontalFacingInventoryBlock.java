@@ -1,5 +1,6 @@
 package net.transferchest.mod.abstraction;
 
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFacingBlock;
@@ -21,7 +22,7 @@ public abstract class AHorizontalFacingInventoryBlock extends AInventoryBlock
         FACING = HorizontalFacingBlock.FACING;
     }
     
-    public AHorizontalFacingInventoryBlock(Settings settings)
+    public AHorizontalFacingInventoryBlock(AbstractBlock.Settings settings)
     {
         super(settings);
         this.setDefaultState((BlockState) ((BlockState) ((BlockState) this.stateManager.getDefaultState()).with(FACING, Direction.NORTH)));

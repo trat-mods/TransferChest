@@ -1,7 +1,7 @@
 package net.transferchest.mod.loader;
 
-import net.transferchest.mod.initializer.*;
 import net.fabricmc.api.ModInitializer;
+import net.transferchest.mod.initializer.*;
 
 public final class TCLoader implements ModInitializer
 {
