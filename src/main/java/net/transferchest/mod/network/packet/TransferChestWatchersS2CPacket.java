@@ -36,16 +36,13 @@ public class TransferChestWatchersS2CPacket extends CustomPacket
     {
         ctx.getTaskQueue().execute(() ->
         {
-            System.out.println("On receive");
             ClientPlayerEntity player = MinecraftClient.getInstance().player;
             ScreenHandler handler = player.currentScreenHandler;
             if(handler != null)
             {
-                System.out.println(handler.toString());
                 if(handler instanceof TransferChestGUIHandler)
                 {
                     TransferChestGUIHandler tcHandler = (TransferChestGUIHandler) handler;
-                    
                     tcHandler.updatePanelEntries(names);
                 }
             }
