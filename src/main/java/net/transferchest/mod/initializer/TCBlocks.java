@@ -10,7 +10,6 @@ public final class TCBlocks
     
     public static void initialize()
     {
-        
         Registry.register(Registry.BLOCK, TransferChestBlock.ID, TRANSFER_CHEST_BLOCK);
     }
 }

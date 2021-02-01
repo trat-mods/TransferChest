@@ -19,16 +19,18 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
+import net.minecraft.util.Tickable;
 import net.minecraft.util.math.Direction;
 import net.transferchest.mod.block.TransferChestBlock;
 import net.transferchest.mod.core.TransferChestHandler;
 import net.transferchest.mod.entity.abstraction.AInventoryEntity;
 import net.transferchest.mod.gui.handler.TransferChestGUIHandler;
+import net.transferchest.mod.initializer.TCBlocks;
 import net.transferchest.mod.initializer.TCEntities;
 import net.transferchest.mod.initializer.TCItems;
 import net.transferchest.mod.initializer.TCSounds;
 
-public class TransferChestBlockEntity extends AInventoryEntity implements NamedScreenHandlerFactory, ExtendedScreenHandlerFactory
+public class TransferChestBlockEntity extends AInventoryEntity implements NamedScreenHandlerFactory, ExtendedScreenHandlerFactory, Tickable
 {
     public static final int INVENTORY_SIZE = 10;
     private int viewers;
@@ -89,11 +91,6 @@ public class TransferChestBlockEntity extends AInventoryEntity implements NamedS
     {
         viewers--;
         if(viewers < 0) viewers = 0;
-        
-        if(viewers <= 0 && isOpened())
-        {
-            setOpened(false);
-        }
     }
     
     private void setOpened(boolean opened)
@@ -108,6 +105,21 @@ public class TransferChestBlockEntity extends AInventoryEntity implements NamedS
     
     private boolean isOpened()
     {
-        return this.world.getBlockState(pos).get(TransferChestBlock.OPENED);
+        if(this.world.getBlockState(pos).getBlock().equals(TCBlocks.TRANSFER_CHEST_BLOCK))
+        {
+            return this.world.getBlockState(pos).get(TransferChestBlock.OPENED);
+        }
+        return false;
+    }
+    
+    @Override public void tick()
+    {
+        if(!world.isClient)
+        {
+            if(viewers <= 0 && isOpened())
+            {
+                setOpened(false);
+            }
+        }
     }
 }

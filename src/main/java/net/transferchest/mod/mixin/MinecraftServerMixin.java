@@ -1,5 +1,8 @@
 package net.transferchest.mod.mixin;
 
+import net.minecraft.block.*;
+import net.minecraft.enchantment.ProtectionEnchantment;
+import net.minecraft.entity.TntEntity;
 import net.transferchest.mod.api.ModLogger;
 import net.transferchest.mod.api.Serializer;
 import net.transferchest.mod.core.TransferChestHandler;

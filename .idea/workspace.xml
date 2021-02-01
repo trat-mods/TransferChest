@@ -5,8 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c569bc7-b772-43e0-afc0-64eb38a17622" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/gui/widget/WReleaseFocusListPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/gui/widget/WReleaseFocusScrollBar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/entity/TransferChestBlockEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/entity/TransferChestBlockEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/gui/handler/TransferChestGUIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/gui/handler/TransferChestGUIHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/initializer/TCBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/initializer/TCBlocks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/loader/TCClientLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/loader/TCClientLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/mixin/MinecraftServerMixin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/mixin/MinecraftServerMixin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/network/NetworkHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/network/NetworkHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/network/packet/CustomPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/network/packet/CustomS2CPacket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/network/packet/TransferChestWatchersS2CPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/network/packet/TransferChestWatchersS2CPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fabric.mod.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fabric.mod.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +29,13 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -28,7 +46,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LaunchersMod-1.16" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LiterallyChunkLoader-1.16" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RunManager" selected="Application.Minecraft Client" />
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -41,16 +60,5 @@
       <updated>1609607548110</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/net/transferchest/mod/block/TransferChestBlock.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

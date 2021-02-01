@@ -1,13 +1,17 @@
 package net.transferchest.mod.gui.handler;
 
 import io.github.cottonmc.cotton.gui.SyncedGuiDescription;
-import io.github.cottonmc.cotton.gui.widget.*;
+import io.github.cottonmc.cotton.gui.widget.WItemSlot;
+import io.github.cottonmc.cotton.gui.widget.WLabel;
+import io.github.cottonmc.cotton.gui.widget.WPlainPanel;
+import io.github.cottonmc.cotton.gui.widget.WPlayerInvPanel;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.text.LiteralText;
 import net.transferchest.mod.core.TransferChestHandler;
 import net.transferchest.mod.entity.TransferChestBlockEntity;
+import net.transferchest.mod.gui.widget.WReleaseFocusListPanel;
 import net.transferchest.mod.initializer.TCGUIHandlers;
 
 import java.util.ArrayList;
@@ -17,7 +21,7 @@ public class TransferChestGUIHandler extends SyncedGuiDescription
 {
     private TransferChestBlockEntity bufferEntity;
     private ArrayList<String> watchersName;
-    private WListPanel namesPanel;
+    private WReleaseFocusListPanel namesPanel;
     
     public TransferChestGUIHandler(int syncId, PlayerInventory playerInventory, ScreenHandlerContext context)
     {
@@ -43,10 +47,9 @@ public class TransferChestGUIHandler extends SyncedGuiDescription
         {
             playerNameEntry.name.setText(new LiteralText(s));
         };
-        namesPanel = new WListPanel(watchersName, PlayerNameEntry::new, configurator);
+        namesPanel = new WReleaseFocusListPanel(watchersName, PlayerNameEntry::new, configurator);
         namesPanel.setListItemHeight(12);
         root.add(namesPanel, 96, 2, 70, 65);
-        
         WPlayerInvPanel playerInvPanel = this.createPlayerInventoryPanel();
         root.add(playerInvPanel, 2, 70);
         root.validate(this);
@@ -64,7 +67,6 @@ public class TransferChestGUIHandler extends SyncedGuiDescription
         });
         bufferEntity = lambdaBypass[0];
     }
-    
     
     public void updatePanelEntries(String[] names)
     {

@@ -1,18 +1,18 @@
 package net.transferchest.mod.network.packet;
 
 import io.netty.buffer.Unpooled;
-import net.fabricmc.fabric.api.network.PacketContext;
-import net.fabricmc.fabric.api.network.ServerSidePacketRegistry;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.screen.ScreenHandler;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.Identifier;
 import net.transferchest.mod.gui.handler.TransferChestGUIHandler;
 import net.transferchest.mod.loader.TCLoader;
 
-public class TransferChestWatchersS2CPacket extends CustomPacket
+public class TransferChestWatchersS2CPacket extends CustomS2CPacket
 {
     public static Identifier PACKET_ID = new Identifier(TCLoader.MOD_ID, "tc_packet");
     private String[] names;
@@ -29,12 +29,13 @@ public class TransferChestWatchersS2CPacket extends CustomPacket
     {
         PacketByteBuf buf = new PacketByteBuf(Unpooled.buffer());
         write(buf);
-        ServerSidePacketRegistry.INSTANCE.sendToPlayer(player, PACKET_ID, buf);
+        ServerPlayNetworking.send((ServerPlayerEntity) player, PACKET_ID, buf);
+        //ServerSidePacketRegistry.INSTANCE.sendToPlayer(player, PACKET_ID, buf);
     }
     
-    public void onReceive(PacketContext ctx)
+    public void onReceive(MinecraftClient ctx)
     {
-        ctx.getTaskQueue().execute(() ->
+        ctx.execute(() ->
         {
             ClientPlayerEntity player = MinecraftClient.getInstance().player;
             ScreenHandler handler = player.currentScreenHandler;
