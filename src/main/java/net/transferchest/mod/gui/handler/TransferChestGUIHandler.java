@@ -49,7 +49,7 @@ public class TransferChestGUIHandler extends SyncedGuiDescription
         };
         namesPanel = new WReleaseFocusListPanel(watchersName, PlayerNameEntry::new, configurator);
         namesPanel.setListItemHeight(12);
-        root.add(namesPanel, 96, 2, 70, 65);
+        root.add(namesPanel, 92, 2, 70, 70);
         WPlayerInvPanel playerInvPanel = this.createPlayerInventoryPanel();
         root.add(playerInvPanel, 2, 70);
         root.validate(this);
@@ -73,6 +73,12 @@ public class TransferChestGUIHandler extends SyncedGuiDescription
         watchersName.clear();
         for(String name : names)
         {
+            name = "12345678910";
+            if(name.length() > 10)
+            {
+                name = name.substring(0, 8);
+                name += "...";
+            }
             watchersName.add(name);
         }
         namesPanel.layout();
