@@ -8,9 +8,9 @@
     "t_r_a_t"
   ],
   "contact": {
-    "homepage": "https://github.com/tratteo/TransferChest-1.16/wiki",
-    "sources": "https://github.com/tratteo/TransferChest-1.16",
-    "issues": "https://github.com/tratteo/TransferChest-1.16/issues"
+    "homepage": "https://github.com/tratteo/TransferChest/wiki",
+    "sources": "https://github.com/tratteo/TransferChest",
+    "issues": "https://github.com/tratteo/TransferChest/issues"
   },
   "license": "MIT",
   "icon": "assets/transferchestmod/icon.png",
