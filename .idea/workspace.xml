@@ -5,10 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c569bc7-b772-43e0-afc0-64eb38a17622" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/abstraction/AHorizontalFacingInventoryBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/abstraction/AHorizontalFacingInventoryBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/abstraction/AInventoryBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/abstraction/AInventoryBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/api/ImplementedSidedInventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/api/ImplementedSidedInventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/block/TransferChestBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/block/TransferChestBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/core/TransferChestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/core/TransferChestHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/entity/TransferChestBlockEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/entity/TransferChestBlockEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/entity/abstraction/AInventoryEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/entity/abstraction/AInventoryEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/gui/handler/TransferChestGUIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/gui/handler/TransferChestGUIHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/gui/widget/WReleaseFocusListPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/gui/widget/WReleaseFocusListPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/gui/widget/WReleaseFocusScrollBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/gui/widget/WReleaseFocusScrollBar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/initializer/TCBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/initializer/TCBlocks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/initializer/TCEntities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/initializer/TCEntities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/mixin/MinecraftServerMixin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/mixin/MinecraftServerMixin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fabric.mod.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fabric.mod.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/transferchestmod.mixins.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/transferchestmod.mixins.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,18 +52,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1mWRpla2ON6z7Ft9CKsnGwM0t0m" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LaunchersMod-1.16" />
-    <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/bltmt/Documents/Progetti/TrattMods/TransferChest-1.16",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.48735633",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  }
+}]]></component>
   <component name="RunManager" selected="Application.Minecraft Client" />
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -64,6 +92,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

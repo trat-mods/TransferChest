@@ -5,6 +5,8 @@ import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityTicker;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.BlockSoundGroup;
@@ -22,48 +24,47 @@ import net.transferchest.mod.abstraction.AHorizontalFacingInventoryBlock;
 import net.transferchest.mod.core.TransferChestHandler;
 import net.transferchest.mod.entity.TransferChestBlockEntity;
 import net.transferchest.mod.gui.handler.TransferChestGUIHandler;
+import net.transferchest.mod.initializer.TCEntities;
 import net.transferchest.mod.loader.TCLoader;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
-public class TransferChestBlock extends AHorizontalFacingInventoryBlock
-{
+public class TransferChestBlock extends AHorizontalFacingInventoryBlock {
     public static final Identifier ID = new Identifier(TCLoader.MOD_ID, "transfer_chest");
     public static final Identifier OPEN_SOUND = new Identifier(TCLoader.MOD_ID, "transfer_chest_open");
     public static final Identifier CLOSE_SOUND = new Identifier(TCLoader.MOD_ID, "transfer_chest_close");
     public static final BooleanProperty OPENED;
-    
-    static
-    {
+
+    static {
         OPENED = BooleanProperty.of("opened");
     }
-    
-    public TransferChestBlock()
-    {
-        super(FabricBlockSettings.of(Material.STONE).materialColor(MaterialColor.BLACK).requiresTool().strength(40F, 900F).sounds(BlockSoundGroup.STONE));
+
+    public TransferChestBlock() {
+        super(FabricBlockSettings.of(Material.STONE).materialColor(MapColor.BLACK).requiresTool().strength(40F, 900F).sounds(BlockSoundGroup.STONE));
         this.setDefaultState((BlockState) ((BlockState) ((BlockState) this.stateManager.getDefaultState()).with(OPENED, false)));
     }
-    
-    @Override protected void appendProperties(StateManager.Builder<Block, BlockState> stateManager)
-    {
+
+    @Nullable
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
+        return checkType(type, TCEntities.TRANSFER_CHEST_BLOCK_ENTITY, TransferChestBlockEntity::tick);
+    }
+
+    @Override
+    protected void appendProperties(StateManager.Builder<Block, BlockState> stateManager) {
         stateManager.add(OPENED);
         super.appendProperties(stateManager);
     }
-    
+
     @Override
-    public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext ePos)
-    {
+    public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext ePos) {
         return Block.createCuboidShape(1F, 0F, 1F, 15F, 14F, 15F);
     }
-    
-    @Override public BlockEntity createBlockEntity(BlockView world)
-    {
-        return new TransferChestBlockEntity();
-    }
-    
+
+
     @Environment(EnvType.CLIENT)
-    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random)
-    {
+    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
         int j = random.nextInt(2) * 2 - 1;
         int k = random.nextInt(2) * 2 - 1;
         double d = (double) pos.getX() + 0.5D + 0.25D * (double) j;
@@ -75,16 +76,20 @@ public class TransferChestBlock extends AHorizontalFacingInventoryBlock
         world.addParticle(ParticleTypes.DRAGON_BREATH, d, e, f, g, h, l);
     }
 
-    
+
     @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit)
-    {
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         player.openHandledScreen(state.createScreenHandlerFactory(world, pos));
-        if(!world.isClient)
-        {
+        if (!world.isClient) {
             TransferChestHandler.openGUI(world, (TransferChestGUIHandler) player.currentScreenHandler);
-            return  ActionResult.SUCCESS;
+            return ActionResult.SUCCESS;
         }
         return ActionResult.SUCCESS;
+    }
+
+    @Nullable
+    @Override
+    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+        return new TransferChestBlockEntity(pos, state);
     }
 }

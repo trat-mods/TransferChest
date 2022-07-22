@@ -1,37 +1,38 @@
 {
-    "schemaVersion": 1,
-    "id": "transferchestmod",
-    "version": "${version}",
-    "name": "Transfer Chest",
-    "description": "Introduces a chest that is capable of instantly transfer items among players",
-    "authors": [
-        "t_r_a_t"
+  "schemaVersion": 1,
+  "id": "transferchestmod",
+  "version": "${version}",
+  "name": "Transfer Chest",
+  "description": "Introduces a chest that is capable of instantly transfer items among players",
+  "authors": [
+    "t_r_a_t"
+  ],
+  "contact": {
+    "homepage": "https://github.com/tratteo/TransferChest-1.16/wiki",
+    "sources": "https://github.com/tratteo/TransferChest-1.16",
+    "issues": "https://github.com/tratteo/TransferChest-1.16/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/transferchestmod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.transferchest.mod.loader.TCLoader"
     ],
-    "contact": {
-        "homepage": "https://github.com/tratteo/TransferChest-1.16/wiki",
-        "sources": "https://github.com/tratteo/TransferChest-1.16",
-        "issues": "https://github.com/tratteo/TransferChest-1.16/issues"
-    },
-    "license": "CC0-1.0",
-    "icon": "assets/transferchestmod/icon.png",
-    "environment": "*",
-    "entrypoints": {
-        "main": [
-            "net.transferchest.mod.loader.TCLoader"
-        ],
-        "client": [
-            "net.transferchest.mod.loader.TCClientLoader"
-        ]
-    },
-    "mixins": [
-        "transferchestmod.mixins.json"
-    ],
-    "depends": {
-        "fabricloader": ">=0.7.2",
-        "fabric": "*",
-        "minecraft": "1.16.x"
-    },
-    "suggests": {
-        "flamingo": "*"
-    }
+    "client": [
+      "net.transferchest.mod.loader.TCClientLoader"
+    ]
+  },
+  "mixins": [
+    "transferchestmod.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
 }
