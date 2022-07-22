@@ -5,44 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c569bc7-b772-43e0-afc0-64eb38a17622" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Minecraft_Client.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Minecraft_Server.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/abstraction/AHorizontalFacingInventoryBlock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/abstraction/AInventoryBlock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/api/ImplementedInventory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/api/ImplementedSidedInventory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/api/ModLogger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/api/Serializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/block/TransferChestBlock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/core/ItemStackWrapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/core/SerializableInventory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/core/TransferChestHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/core/TransferChestInventory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/entity/TransferChestBlockEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/entity/abstraction/AInventoryEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/gui/handler/TransferChestGUIHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/gui/screen/TransferChestScreen.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/gui/widget/WReleaseFocusListPanel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/gui/widget/WReleaseFocusScrollBar.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/initializer/TCBlocks.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/initializer/TCEntities.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/initializer/TCGUIHandlers.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/initializer/TCItems.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/initializer/TCScreens.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/initializer/TCSounds.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/loader/TCClientLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/loader/TCLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/mixin/MinecraftServerMixin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/network/NetworkHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/network/packet/CustomS2CPacket.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remappedSrc/net/transferchest/mod/network/packet/TransferChestWatchersS2CPacket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/block/TransferChestBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/block/TransferChestBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/entity/TransferChestBlockEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/entity/TransferChestBlockEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/gui/handler/TransferChestGUIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/gui/handler/TransferChestGUIHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +20,18 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -73,15 +52,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "last_opened_file_path": "C:/Users/bltmt/Documents/Progetti/TrattMods/TransferChest",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.48735633",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+    "settings.editor.selected.configurable": "terminal"
   }
 }]]></component>
+  <component name="RunManager" selected="Application.Client" />
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

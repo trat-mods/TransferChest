@@ -18,8 +18,6 @@ import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
-import net.minecraft.text.LiteralTextContent;
-import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -71,7 +69,7 @@ public class TransferChestBlockEntity extends AInventoryEntity implements NamedS
 
     @Override
     public Text getDisplayName() {
-        return MutableText.of(new LiteralTextContent(I18n.translate(getCachedState().getBlock().getTranslationKey())));
+        return Text.of(I18n.translate(getCachedState().getBlock().getTranslationKey()));
     }
 
     @Override

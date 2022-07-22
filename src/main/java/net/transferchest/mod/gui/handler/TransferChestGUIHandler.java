@@ -9,8 +9,6 @@ import io.github.cottonmc.cotton.gui.widget.data.Insets;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.screen.ScreenHandlerContext;
-import net.minecraft.text.LiteralTextContent;
-import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
 import net.transferchest.mod.core.TransferChestHandler;
 import net.transferchest.mod.entity.TransferChestBlockEntity;
@@ -42,7 +40,7 @@ public class TransferChestGUIHandler extends SyncedGuiDescription {
         }
 
         BiConsumer<String, PlayerNameEntry> configurator = (String s, PlayerNameEntry playerNameEntry) -> {
-            playerNameEntry.name.setText(MutableText.of(new LiteralTextContent(s)));
+            playerNameEntry.name.setText(Text.of(s));
         };
         namesPanel = new WReleaseFocusListPanel(watchersName, PlayerNameEntry::new, configurator);
         namesPanel.setListItemHeight(12);
@@ -94,7 +92,7 @@ public class TransferChestGUIHandler extends SyncedGuiDescription {
         WLabel name;
 
         public PlayerNameEntry() {
-            name = new WLabel(MutableText.of(new LiteralTextContent("Placeholder")));
+            name = new WLabel(Text.of("Placeholder"));
             this.add(name, 0, 0);
             this.setSize(3 * 18, 12);
         }

@@ -28,8 +28,6 @@ import net.transferchest.mod.initializer.TCEntities;
 import net.transferchest.mod.loader.TCLoader;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Random;
-
 public class TransferChestBlock extends AHorizontalFacingInventoryBlock {
     public static final Identifier ID = new Identifier(TCLoader.MOD_ID, "transfer_chest");
     public static final Identifier OPEN_SOUND = new Identifier(TCLoader.MOD_ID, "transfer_chest_open");
@@ -62,9 +60,9 @@ public class TransferChestBlock extends AHorizontalFacingInventoryBlock {
         return Block.createCuboidShape(1F, 0F, 1F, 15F, 14F, 15F);
     }
 
-
+    @Override
     @Environment(EnvType.CLIENT)
-    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
+    public void randomDisplayTick(BlockState state, World world, BlockPos pos, net.minecraft.util.math.random.Random random) {
         int j = random.nextInt(2) * 2 - 1;
         int k = random.nextInt(2) * 2 - 1;
         double d = (double) pos.getX() + 0.5D + 0.25D * (double) j;
