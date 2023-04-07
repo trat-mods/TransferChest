@@ -29,7 +29,7 @@ public abstract class AHorizontalFacingInventoryBlock extends AInventoryBlock {
     }
 
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return (BlockState) this.getDefaultState().with(FACING, ctx.getPlayerFacing().getOpposite());
+        return (BlockState) this.getDefaultState().with(FACING, ctx.getPlayerLookDirection().getOpposite());
     }
 
     public BlockState rotate(BlockState state, BlockRotation rotation) {

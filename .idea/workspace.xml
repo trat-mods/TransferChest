@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c569bc7-b772-43e0-afc0-64eb38a17622" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/block/TransferChestBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/block/TransferChestBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/abstraction/AHorizontalFacingInventoryBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/abstraction/AHorizontalFacingInventoryBlock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/entity/TransferChestBlockEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/entity/TransferChestBlockEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/gui/handler/TransferChestGUIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/gui/handler/TransferChestGUIHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/initializer/TCBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/initializer/TCBlocks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/initializer/TCEntities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/initializer/TCEntities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/initializer/TCItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/initializer/TCItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/initializer/TCScreens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/initializer/TCScreens.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/initializer/TCSounds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/initializer/TCSounds.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,18 +56,19 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/bltmt/Documents/Progetti/TrattMods/TransferChest",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.48735633",
-    "settings.editor.selected.configurable": "terminal"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/matteo/Documents/Progetti/Dev/TrattMods/TransferChest&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.48735633&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Client" />
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

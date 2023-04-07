@@ -1,7 +1,6 @@
 package net.transferchest.mod.entity;
 
 
-import blue.endless.jankson.annotation.Nullable;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -30,6 +29,7 @@ import net.transferchest.mod.initializer.TCBlocks;
 import net.transferchest.mod.initializer.TCEntities;
 import net.transferchest.mod.initializer.TCItems;
 import net.transferchest.mod.initializer.TCSounds;
+import org.jetbrains.annotations.Nullable;
 
 public class TransferChestBlockEntity extends AInventoryEntity implements NamedScreenHandlerFactory, ExtendedScreenHandlerFactory {
     public static final int INVENTORY_SIZE = 10;

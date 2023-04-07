@@ -79,14 +79,14 @@ public class TransferChestGUIHandler extends SyncedGuiDescription {
     }
 
     @Override
-    public void close(PlayerEntity player) {
+    public void onClosed(PlayerEntity player) {
         if (!world.isClient) {
             TransferChestHandler.closeGUI(world, this);
             blockInventory.onClose(playerInventory.player);
         }
-
-        super.close(player);
+        super.onClosed(player);
     }
+
 
     public static class PlayerNameEntry extends WPlainPanel {
         WLabel name;
