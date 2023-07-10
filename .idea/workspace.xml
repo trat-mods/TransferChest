@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="4c569bc7-b772-43e0-afc0-64eb38a17622" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/block/TransferChestBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/block/TransferChestBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/initializer/TCGUIHandlers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/transferchest/mod/initializer/TCGUIHandlers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fabric.mod.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fabric.mod.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +58,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/matteo/Documents/Progetti/TrattMods/TransferChest",
+    "last_opened_file_path": "C:/Users/matteo/Documents/Progetti/Dev/TrattMods/LiterallyChunkLoader",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.48735633",

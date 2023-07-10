@@ -3,7 +3,10 @@ package net.transferchest.mod.block;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.MapColor;
+import net.minecraft.block.ShapeContext;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
@@ -39,7 +42,7 @@ public class TransferChestBlock extends AHorizontalFacingInventoryBlock {
     }
 
     public TransferChestBlock() {
-        super(FabricBlockSettings.of(Material.STONE).materialColor(MapColor.BLACK).requiresTool().strength(40F, 900F).sounds(BlockSoundGroup.STONE));
+        super(FabricBlockSettings.create().mapColor(MapColor.BLACK).requiresTool().strength(40F, 900F).sounds(BlockSoundGroup.STONE));
         this.setDefaultState((BlockState) ((BlockState) ((BlockState) this.stateManager.getDefaultState()).with(OPENED, false)));
     }
 
