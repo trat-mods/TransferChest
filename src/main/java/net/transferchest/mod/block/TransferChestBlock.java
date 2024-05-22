@@ -1,12 +1,10 @@
 package net.transferchest.mod.block;
 
+import com.mojang.serialization.MapCodec;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.MapColor;
-import net.minecraft.block.ShapeContext;
+import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
@@ -16,7 +14,6 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
@@ -49,7 +46,7 @@ public class TransferChestBlock extends AHorizontalFacingInventoryBlock {
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return checkType(type, TCEntities.TRANSFER_CHEST_BLOCK_ENTITY, TransferChestBlockEntity::tick);
+        return validateTicker(type, TCEntities.TRANSFER_CHEST_BLOCK_ENTITY, (world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1));
     }
 
     @Override
@@ -78,8 +75,14 @@ public class TransferChestBlock extends AHorizontalFacingInventoryBlock {
     }
 
 
+    @Nullable
     @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+        return new TransferChestBlockEntity(pos, state);
+    }
+
+    @Override
+    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         player.openHandledScreen(state.createScreenHandlerFactory(world, pos));
         if (!world.isClient) {
             TransferChestHandler.openGUI(world, (TransferChestGUIHandler) player.currentScreenHandler);
@@ -88,9 +91,8 @@ public class TransferChestBlock extends AHorizontalFacingInventoryBlock {
         return ActionResult.SUCCESS;
     }
 
-    @Nullable
     @Override
-    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new TransferChestBlockEntity(pos, state);
+    protected MapCodec<? extends BlockWithEntity> getCodec() {
+        return null;
     }
 }

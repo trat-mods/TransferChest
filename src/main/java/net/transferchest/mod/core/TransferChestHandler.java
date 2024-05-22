@@ -7,9 +7,8 @@ import net.minecraft.world.World;
 import net.transferchest.mod.api.ModLogger;
 import net.transferchest.mod.entity.TransferChestBlockEntity;
 import net.transferchest.mod.gui.handler.TransferChestGUIHandler;
-import net.transferchest.mod.loader.TCLoader;
 import net.transferchest.mod.network.NetworkHandler;
-import net.transferchest.mod.network.packet.TransferChestWatchersS2CPacket;
+import net.transferchest.mod.network.packet.TransferChestPacketPayload;
 
 import java.util.ArrayList;
 
@@ -46,12 +45,12 @@ public final class TransferChestHandler {
         for (int i = 0; i < openGUIs.size(); i++) {
             names[i] = openGUIs.get(i).getOwnerName().getString();
         }
-        NetworkHandler.sendToAll(new TransferChestWatchersS2CPacket(names), world.getServer().getPlayerManager());
+        NetworkHandler.sendToAll(new TransferChestPacketPayload(names), world.getServer().getPlayerManager());
     }
 
 
     public static void printStatus() {
-        new ModLogger(TCLoader.MOD_ID).logInfo(inventory.toString());
+        ModLogger.DEFAULT_CHANNEL.logInfo(inventory.toString());
     }
 
     public static void buildInventory(SerializableInventory serializableInventory) {

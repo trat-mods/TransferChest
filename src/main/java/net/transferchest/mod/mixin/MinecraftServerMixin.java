@@ -6,7 +6,6 @@ import net.transferchest.mod.api.ModLogger;
 import net.transferchest.mod.api.Serializer;
 import net.transferchest.mod.core.SerializableInventory;
 import net.transferchest.mod.core.TransferChestHandler;
-import net.transferchest.mod.loader.TCLoader;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -20,7 +19,7 @@ public abstract class MinecraftServerMixin {
 
     @Inject(at = @At("HEAD"), method = "shutdown()V")
     private void shutdown(CallbackInfo info) {
-        new ModLogger(TCLoader.MOD_ID).logInfo("SERIALIZING");
+        ModLogger.DEFAULT_CHANNEL.logInfo("SERIALIZING");
         TransferChestHandler.printStatus();
         SerializableInventory inventory = TransferChestHandler.getSerializableInventory();
         Serializer.serialize(inventory, ((MinecraftServer) (Object) this).getSaveProperties().getLevelName());
@@ -34,7 +33,7 @@ public abstract class MinecraftServerMixin {
             TransferChestHandler.buildInventory(obj);
         }
 
-        new ModLogger(TCLoader.MOD_ID).logInfo("DESERIALIZING");
+        ModLogger.DEFAULT_CHANNEL.logInfo("DESERIALIZING");
         TransferChestHandler.printStatus();
     }
 }

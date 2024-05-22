@@ -17,6 +17,7 @@ public abstract class AInventoryBlock extends BlockWithEntity {
     }
 
     public int getComparatorOutput(BlockState state, World world, BlockPos pos) {
+
         return ScreenHandler.calculateComparatorOutput(world.getBlockEntity(pos));
     }
 

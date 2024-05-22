@@ -1,7 +1,6 @@
 package net.transferchest.mod.entity;
 
 
-import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShulkerBoxBlock;
@@ -10,11 +9,9 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.network.PacketByteBuf;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.ScreenHandlerContext;
-import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.text.Text;
@@ -31,7 +28,7 @@ import net.transferchest.mod.initializer.TCItems;
 import net.transferchest.mod.initializer.TCSounds;
 import org.jetbrains.annotations.Nullable;
 
-public class TransferChestBlockEntity extends AInventoryEntity implements NamedScreenHandlerFactory, ExtendedScreenHandlerFactory {
+public class TransferChestBlockEntity extends AInventoryEntity implements NamedScreenHandlerFactory {
     public static final int INVENTORY_SIZE = 10;
     private int viewers;
 
@@ -39,13 +36,6 @@ public class TransferChestBlockEntity extends AInventoryEntity implements NamedS
         super(TCEntities.TRANSFER_CHEST_BLOCK_ENTITY, INVENTORY_SIZE, pos, state);
     }
 
-    public static void tick(World world, BlockPos pos, BlockState state, TransferChestBlockEntity be) {
-        if (!world.isClient) {
-            if (be.viewers <= 0 && be.isOpened()) {
-                be.setOpened(false);
-            }
-        }
-    }
 
     @Override
     public boolean isValid(int slot, ItemStack stack) {
@@ -80,11 +70,6 @@ public class TransferChestBlockEntity extends AInventoryEntity implements NamedS
 
 
     @Override
-    public void writeScreenOpeningData(ServerPlayerEntity serverPlayerEntity, PacketByteBuf packetByteBuf) {
-        packetByteBuf.writeBlockPos(pos);
-    }
-
-    @Override
     public void onOpen(PlayerEntity player) {
         viewers++;
         if (viewers > 0 && !isOpened()) {
@@ -114,4 +99,11 @@ public class TransferChestBlockEntity extends AInventoryEntity implements NamedS
     }
 
 
+    public void tick(World world, BlockPos pos, BlockState state) {
+        if (!world.isClient) {
+            if (viewers <= 0 && isOpened()) {
+                setOpened(false);
+            }
+        }
+    }
 }
