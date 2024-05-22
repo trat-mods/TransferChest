@@ -1,23 +1,23 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "#E#",
-        "EPE",
-        "#E#"
-    ],
-    "key": {
-        "#": {
-            "item": "minecraft:crying_obsidian"
-        },
-        "E": {
-            "item": "minecraft:ender_chest"
-        },
-        "P": {
-            "item": "minecraft:ender_eye"
-        }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#E#",
+    "EPE",
+    "#E#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:crying_obsidian"
     },
-    "result": {
-        "item": "transferchestmod:transfer_chest",
-        "count": 1
+    "E": {
+      "item": "minecraft:ender_chest"
+    },
+    "P": {
+      "item": "minecraft:ender_eye"
     }
+  },
+  "result": {
+    "id": "transferchestmod:transfer_chest",
+    "count": 1
+  }
 }
