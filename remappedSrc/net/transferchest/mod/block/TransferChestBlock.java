@@ -29,9 +29,9 @@ import net.transferchest.mod.loader.TCLoader;
 import org.jetbrains.annotations.Nullable;
 
 public class TransferChestBlock extends AHorizontalFacingInventoryBlock {
-    public static final Identifier ID = Identifier.of(TCLoader.MOD_ID, "transfer_chest");
-    public static final Identifier OPEN_SOUND = Identifier.of(TCLoader.MOD_ID, "transfer_chest_open");
-    public static final Identifier CLOSE_SOUND = Identifier.of(TCLoader.MOD_ID, "transfer_chest_close");
+    public static final Identifier ID = new Identifier(TCLoader.MOD_ID, "transfer_chest");
+    public static final Identifier OPEN_SOUND = new Identifier(TCLoader.MOD_ID, "transfer_chest_open");
+    public static final Identifier CLOSE_SOUND = new Identifier(TCLoader.MOD_ID, "transfer_chest_close");
     public static final BooleanProperty OPENED;
 
     static {

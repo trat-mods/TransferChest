@@ -13,7 +13,7 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.transferchest.mod.gui.handler.TransferChestGUIHandler;
 
 public record TransferChestPacketPayload(String[] names) implements CustomPayload {
-    public static final Id<TransferChestPacketPayload> ID = CustomPayload.id("tcpacket");
+    public static final Id<TransferChestPacketPayload> ID = CustomPayload.id("tc:packet");
     public static final PacketCodec<PacketByteBuf, TransferChestPacketPayload> CODEC = PacketCodec.of(TransferChestPacketPayload::write, TransferChestPacketPayload::read);
 
     public static TransferChestPacketPayload read(PacketByteBuf buf) {
