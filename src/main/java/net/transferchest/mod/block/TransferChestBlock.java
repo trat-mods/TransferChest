@@ -3,13 +3,14 @@ package net.transferchest.mod.block;
 import com.mojang.serialization.MapCodec;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
@@ -39,7 +40,13 @@ public class TransferChestBlock extends AHorizontalFacingInventoryBlock {
     }
 
     public TransferChestBlock() {
-        super(FabricBlockSettings.create().mapColor(MapColor.BLACK).requiresTool().strength(40F, 900F).sounds(BlockSoundGroup.STONE));
+        super(Block.Settings
+                      .create()
+                      .registryKey(RegistryKey.of(RegistryKeys.BLOCK, ID))
+                      .mapColor(MapColor.BLACK)
+                      .requiresTool()
+                      .strength(40F, 900F)
+                      .sounds(BlockSoundGroup.STONE));
         this.setDefaultState((BlockState) ((BlockState) ((BlockState) this.stateManager.getDefaultState()).with(OPENED, false)));
     }
 

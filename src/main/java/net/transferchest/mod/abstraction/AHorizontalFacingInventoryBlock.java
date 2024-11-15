@@ -6,13 +6,13 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
-import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.state.property.EnumProperty;
 import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.Direction;
 
 public abstract class AHorizontalFacingInventoryBlock extends AInventoryBlock {
-    public static final DirectionProperty FACING;
+    public static final EnumProperty<Direction> FACING;
 
     static {
         FACING = HorizontalFacingBlock.FACING;
