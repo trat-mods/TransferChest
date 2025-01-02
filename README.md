@@ -1,6 +1,6 @@
 <h2 align="center">Welcome to the Wiki page of Transfer Chest</h2>
 <p align="center">
-<img src="https://user-images.githubusercontent.com/31132987/103446388-43623800-4c7f-11eb-830c-4734d00f8468.png" height="200">
+<img src="https://user-images.githubusercontent.com/31132987/103446388-43623800-4c7f-11eb-830c-4734d00f8468.png" height="256">
 </p>
 
 ## Recipe
