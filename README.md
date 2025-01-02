@@ -1,3 +1,15 @@
+<p align="center"><b>📢 Get 25% off of your Minecraft Server! 📢</b></p>
+<p align="center">
+  <img src="https://solar-digital.com/images/portfolio/120/thumb/bisect-hosting.gif" width="400">
+</p>
+
+<p align="center">
+    <a href="https://url-shortener.curseforge.com/eXoh6" target="_blank">  
+        <img src="https://github.com/user-attachments/assets/55cd0dd6-968f-4b4b-bb39-85fc05547f37" width="200"/>
+    </a>
+</p>
+
+
 <h2 align="center">Welcome to the Wiki page of Transfer Chest</h2>
 <p align="center">
 <img src="https://user-images.githubusercontent.com/31132987/103446388-43623800-4c7f-11eb-830c-4734d00f8468.png" height="256">
