@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "transferchestmod:block/transfer_chest_closed"
+  }
+}

@@ -1,3 +1,4 @@
 {
-    "block.transferchestmod.transfer_chest": "Transfer Chest"
+  "block.transferchestmod.transfer_chest": "Transfer Chest",
+  "item.transferchestmod.transfer_chest": "Transfer Chest"
 }

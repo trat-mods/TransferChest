@@ -6,15 +6,9 @@
     "#E#"
   ],
   "key": {
-    "#": {
-      "item": "minecraft:crying_obsidian"
-    },
-    "E": {
-      "item": "minecraft:ender_chest"
-    },
-    "P": {
-      "item": "minecraft:ender_eye"
-    }
+    "#": "minecraft:crying_obsidian",
+    "E": "minecraft:ender_chest",
+    "P": "minecraft:ender_eye"
   },
   "result": {
     "id": "transferchestmod:transfer_chest",
